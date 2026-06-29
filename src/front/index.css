@@ -877,6 +877,59 @@ h3 {
     height: 340px;
   }
 }
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.hero-actions .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding-block: 4rem;
+  }
+
+  .hero-badge {
+    margin-bottom: 1.25rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2.5rem, 12vw, 3.2rem);
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    margin-bottom: 2rem !important;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    margin-bottom: 2.5rem;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .hero-feature {
+    text-align: left;
+  }
+
+  .hero-image-wrapper {
+    margin-top: 1rem;
+  }
+
+  .hero-image {
+    height: 320px;
+  }
+}
 
 /* ========================================
    4. HOME PAGE - CATEGORIES

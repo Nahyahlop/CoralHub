@@ -11,9 +11,9 @@ import { Community } from "../components/Community";
 
 export const Home = () => {
 
-	const { store, dispatch } = useGlobalReducer()
+	const { dispatch } = useGlobalReducer()
 	const navigate = useNavigate();
-	
+
 	const handleSellProduct = () => {
 
 		const token = localStorage.getItem("token");
@@ -92,23 +92,20 @@ export const Home = () => {
 
 							<p className="hero-description mb-5">
 
-								Buy and sell corals, lights and equipments
+								Buy and sell corals, lighting and aquarium equipment
 								with a trusted community of reef keepers.
 
 							</p>
 
 							{/* BUTTONS */}
 
-							<div className="d-flex flex-wrap gap-3 mb-5">
+							<div className="hero-actions">
 
-								<Link to="/catalog">
-
-									<button className="btn hero-btn-outline">
-
-										Explore listings →
-
-									</button>
-
+								<Link
+									to="/catalog"
+									className="btn hero-btn-outline"
+								>
+									Explore listings →
 								</Link>
 
 								<button
@@ -204,11 +201,11 @@ export const Home = () => {
 
 							<div className="hero-image-wrapper mx-auto">
 
-									<img
-										src={heroFish}
-										alt="Marine aquarium fish"
-										className="img-fluid hero-image"
-									/>
+								<img
+									src={heroFish}
+									alt="Marine aquarium fish"
+									className="img-fluid hero-image"
+								/>
 
 							</div>
 
@@ -242,12 +239,12 @@ export const Home = () => {
 			</section>
 			<Categories />
 			<Favorites />
-			
+
 			<RecentlyAdded />
 			<TopSellers />
 			<Community />
 		</div>
 
-		
+
 	);
 }; 
