@@ -3,18 +3,20 @@ import { Link } from "react-router-dom";
 import useGlobalReducer from "../../hooks/useGlobalReducer.jsx";
 
 export const DashboardHeader = () => {
-
     const { store } = useGlobalReducer();
 
     const user = store.currentUser || {};
+    const firstName = user.first_name || "there";
 
     return (
+        <header className="dashboard-header">
+            <div className="dashboard-header-content">
+                <span className="dashboard-eyebrow">
+                    Dashboard
+                </span>
 
-        <div className="dashboard-header">
-
-            <div>
                 <h1 className="dashboard-title">
-                    Welcome back, {user.first_name}!
+                    Welcome back, {firstName}!
                 </h1>
 
                 <p className="dashboard-subtitle">
@@ -28,8 +30,6 @@ export const DashboardHeader = () => {
             >
                 Publish Product
             </Link>
-
-        </div>
-
+        </header>
     );
 };
